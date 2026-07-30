@@ -1,9 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.ACTIVITY_RECOGNITION"/>
     <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
     <uses-permission android:name="android.permission.BODY_SENSORS"/>
+
+    <uses-permission android:name="android.permission.BLUETOOTH_SCAN"
+        android:usesPermissionFlags="neverForLocation" tools:targetApi="s"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT"/>
+    <uses-permission android:name="android.permission.BLUETOOTH" android:maxSdkVersion="30"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" android:maxSdkVersion="30"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" android:maxSdkVersion="30"/>
+    <uses-feature android:name="android.hardware.bluetooth_le" android:required="false"/>
 
     <!-- Health Connect read permissions -->
     <uses-permission android:name="android.permission.health.READ_STEPS"/>
@@ -11,7 +20,6 @@
     <uses-permission android:name="android.permission.health.READ_TOTAL_CALORIES_BURNED"/>
     <uses-permission android:name="android.permission.health.READ_DISTANCE"/>
 
-    <!-- Lets the app check if Health Connect is installed -->
     <queries>
         <package android:name="com.google.android.apps.healthdata"/>
     </queries>
@@ -24,22 +32,17 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PulseForge">
 
-        <activity
-            android:name=".MainActivity"
-            android:exported="true">
+        <activity android:name=".MainActivity" android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
-
-            <!-- Health Connect permission rationale (Android 14+ framework) -->
             <intent-filter>
                 <action android:name="android.intent.action.VIEW_PERMISSION_USAGE"/>
                 <category android:name="android.intent.category.HEALTH_PERMISSIONS"/>
             </intent-filter>
         </activity>
 
-        <!-- Health Connect rationale for Android 13 and below -->
         <activity-alias
             android:name="ViewPermissionUsageActivity"
             android:exported="true"
@@ -50,8 +53,7 @@
             </intent-filter>
         </activity-alias>
 
-        <activity
-            android:name=".DiagnosticsActivity"
-            android:exported="false"/>
+        <activity android:name=".DiagnosticsActivity" android:exported="false"/>
+        <activity android:name=".BluetoothActivity" android:exported="false"/>
     </application>
 </manifest>

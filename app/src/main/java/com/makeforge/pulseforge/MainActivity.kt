@@ -52,6 +52,10 @@ class MainActivity : AppCompatActivity() {
             startActivity(Intent(this, DiagnosticsActivity::class.java))
         }
 
+        binding.btnBluetooth.setOnClickListener {
+            startActivity(Intent(this, BluetoothActivity::class.java))
+        }
+
         requestRuntimePermissions()
         updateHcStatus()
     }

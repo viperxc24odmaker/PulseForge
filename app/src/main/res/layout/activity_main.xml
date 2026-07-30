@@ -99,5 +99,11 @@
             style="@style/Widget.Material3.Button.OutlinedButton"
             android:layout_width="match_parent" android:layout_height="wrap_content"
             android:text="Open Diagnostics / Test Screen"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnBluetooth"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="Connect Watch (Bluetooth)"
+            android:layout_marginTop="10dp"/>
     </LinearLayout>
 </androidx.core.widget.NestedScrollView>
