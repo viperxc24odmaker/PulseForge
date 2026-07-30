@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PulseForge"
+            android:textColor="@color/primary"
+            android:textSize="30sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="by MakeForge Studios"
+            android:textColor="@color/muted"
+            android:textSize="13sp"
+            android:layout_marginBottom="18dp"/>
+
+        <TextView android:id="@+id/hcStatus"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="Health Connect: checking..."
+            android:textColor="@color/text" android:textSize="14sp"
+            android:padding="14dp" android:background="@color/card"
+            android:layout_marginBottom="14dp"/>
+
+        <TextView android:id="@+id/steps"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="Steps today: --"
+            android:textColor="@color/text" android:textSize="18sp"
+            android:padding="16dp" android:background="@color/card"
+            android:layout_marginBottom="10dp"/>
+
+        <TextView android:id="@+id/heartRate"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="Heart rate: --"
+            android:textColor="@color/text" android:textSize="18sp"
+            android:padding="16dp" android:background="@color/card"
+            android:layout_marginBottom="10dp"/>
+
+        <TextView android:id="@+id/calories"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="Calories: --"
+            android:textColor="@color/text" android:textSize="18sp"
+            android:padding="16dp" android:background="@color/card"
+            android:layout_marginBottom="10dp"/>
+
+        <TextView android:id="@+id/distance"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="Distance: --"
+            android:textColor="@color/text" android:textSize="18sp"
+            android:padding="16dp" android:background="@color/card"
+            android:layout_marginBottom="10dp"/>
+
+        <TextView android:id="@+id/phoneSteps"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="Phone step sensor: --"
+            android:textColor="@color/muted" android:textSize="14sp"
+            android:padding="14dp" android:background="@color/card"
+            android:layout_marginBottom="14dp"/>
+
+        <TextView android:id="@+id/summary"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Grant health access to see watch data"
+            android:textColor="@color/muted" android:textSize="13sp"
+            android:layout_marginBottom="18dp"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnGrant"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="Grant Health Access"
+            android:layout_marginBottom="10dp"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnRefresh"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="Refresh Data"
+            android:layout_marginBottom="10dp"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnTestNotif"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="Fire Test Notification"
+            android:layout_marginBottom="10dp"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnDiagnostics"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="Open Diagnostics / Test Screen"/>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>
