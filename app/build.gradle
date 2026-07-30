@@ -5,7 +5,7 @@ plugins {
 
 android {
     namespace 'com.makeforge.pulseforge'
-    compileSdk 35
+    compileSdk 36
 
     defaultConfig {
         applicationId "com.makeforge.pulseforge"
